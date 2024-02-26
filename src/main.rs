@@ -42,11 +42,6 @@ fn linreg(features: &Array1<f64>, labels: &Array1<f64>) -> (f64, f64) {
     (slope, y_int)
 }
 
-/*
-This program is used to try and simulate a linear regression model and train it.
-This is a learning exercise so don't worry if it's not perfect because this would
-would never be used IRL anyway
-*/
 fn main() {
     // sample data
     let hours_studied: Array1<f64> =
@@ -69,6 +64,8 @@ fn main() {
 mod tests {
     use ndarray::arr2;
 
+    // litterally a test to make sure the ndarray and ndarray-linalg are
+    // working properly using intel-mkl-static linalg feats
     #[test]
     pub(crate) fn test_ndarray() {
         use ndarray::arr2;
